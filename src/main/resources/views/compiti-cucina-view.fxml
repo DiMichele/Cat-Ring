@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="800.0" prefWidth="1200.0">
+    
+    <top>
+        <VBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="10" left="20"/>
+            </padding>
+            
+            <Label text="Gestione Compiti Cucina" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+            
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="Evento:"/>
+                <ComboBox fx:id="cmbEventi" prefWidth="350"/>
+                <Button text="Visualizza Dettagli" fx:id="btnDettagliEvento" onAction="#onVisualizzaDettagliEvento"/>
+            </HBox>
+        </VBox>
+    </top>
+    
+    <center>
+        <SplitPane dividerPositions="0.6" orientation="VERTICAL">
+            <VBox spacing="10">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+                
+                <!-- Controlli per visualizzazione e filtri -->
+                <HBox spacing="15" alignment="CENTER_LEFT">
+                    <Label text="Visualizzazione:" style="-fx-font-weight: bold;"/>
+                    <fx:define>
+                        <ToggleGroup fx:id="grpVista"/>
+                    </fx:define>
+                    <RadioButton fx:id="rbVistaCompleta" text="Completa" toggleGroup="$grpVista" selected="true" onAction="#onCambiaVista"/>
+                    <RadioButton fx:id="rbVistaPerTurno" text="Per Turno" toggleGroup="$grpVista" onAction="#onCambiaVista"/>
+                    
+                    <Separator orientation="VERTICAL"/>
+                    
+                    <Label text="Filtro Stato:" style="-fx-font-weight: bold;"/>
+                    <ComboBox fx:id="cmbFiltroStato" prefWidth="120" onAction="#onFiltraPerStato"/>
+                    
+                    <Separator orientation="VERTICAL"/>
+                    
+                    <Button text="Ordina per importanza" onAction="#onOrdinaCompiti"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Button text="Monitora avanzamento" onAction="#onMonitoraAvanzamento"/>
+                </HBox>
+                
+                <TableView fx:id="tblCompiti" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="colRicetta" text="Ricetta" prefWidth="200" resizable="false"/>
+                        <TableColumn fx:id="colCuoco" text="Cuoco" prefWidth="150" resizable="false"/>
+                        <TableColumn fx:id="colTurno" text="Turno" prefWidth="180" resizable="false"/>
+                        <TableColumn fx:id="colStato" text="Stato" prefWidth="100" resizable="false"/>
+                        <TableColumn fx:id="colImportanza" text="Importanza" prefWidth="100" resizable="false"/>
+                        <TableColumn fx:id="colTempo" text="Tempo (min)" prefWidth="100" resizable="false"/>
+                        <TableColumn fx:id="colQuantita" text="Quantità" prefWidth="90" resizable="false"/>
+                        <TableColumn fx:id="colFeedback" text="Feedback" prefWidth="220"/>
+                    </columns>
+                    <contextMenu>
+                        <ContextMenu>
+                            <items>
+                                <MenuItem text="Modifica compito" onAction="#onModificaCompito"/>
+                                <MenuItem text="Visualizza dettagli" onAction="#onVisualizzaDettagliCompito"/>
+                                <MenuItem text="Elimina compito" onAction="#onEliminaCompito"/>
+                                <SeparatorMenuItem/>
+                                <MenuItem text="Visualizza feedback cuochi" onAction="#onVisualizzaFeedback"/>
+                            </items>
+                        </ContextMenu>
+                    </contextMenu>
+                </TableView>
+                
+                <!-- Area per vista raggruppata -->
+                <ScrollPane fx:id="scrollVistaRaggruppata" visible="false" managed="false" VBox.vgrow="ALWAYS">
+                    <VBox fx:id="vboxVistaRaggruppata" spacing="10" prefWidth="1150">
+                        <padding>
+                            <Insets top="10" right="10" bottom="10" left="10"/>
+                        </padding>
+                    </VBox>
+                </ScrollPane>
+            </VBox>
+            
+            <TabPane>
+                <Tab text="Carico Cuochi" closable="false">
+                    <VBox spacing="10">
+                        <padding>
+                            <Insets top="15" right="15" bottom="15" left="15"/>
+                        </padding>
+                        
+                        <HBox spacing="10" alignment="CENTER_LEFT">
+                            <Label text="Vista carico di lavoro universale per cuoco (tutti gli eventi)" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+                            <Region HBox.hgrow="ALWAYS"/>
+    
+                        </HBox>
+                        
+                        <TableView fx:id="tblCaricoCuochi" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="colCuocoCarico" text="Cuoco" prefWidth="150"/>
+                                <TableColumn fx:id="colNumCompiti" text="N. Compiti" prefWidth="100"/>
+                                <TableColumn fx:id="colTempoTotale" text="Tempo Tot. (min)" prefWidth="120"/>
+                                <TableColumn fx:id="colCompitiDettaglio" text="Compiti Assegnati" prefWidth="400"/>
+                                <TableColumn fx:id="colDisponibilita" text="Disponibilità" prefWidth="150"/>
+                            </columns>
+                        </TableView>
+                    </VBox>
+                </Tab>
+                
+                <Tab text="Assegna Compiti" closable="false">
+                    <GridPane hgap="10" vgap="10">
+                        <padding>
+                            <Insets top="15" right="15" bottom="15" left="15"/>
+                        </padding>
+                        <columnConstraints>
+                            <ColumnConstraints minWidth="100" prefWidth="120"/>
+                            <ColumnConstraints prefWidth="200" hgrow="ALWAYS"/>
+                            <ColumnConstraints minWidth="100" prefWidth="120"/>
+                            <ColumnConstraints prefWidth="200" hgrow="ALWAYS"/>
+                        </columnConstraints>
+                        
+                        <Label text="1. Ricetta:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <ComboBox fx:id="cmbRicette" prefWidth="200" maxWidth="Infinity" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                        
+                        <Label text="2. Turno:" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                        <ComboBox fx:id="cmbTurni" prefWidth="200" maxWidth="Infinity" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+                        
+                        <Label text="3. Tempo stimato:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <HBox spacing="5" alignment="CENTER_LEFT" GridPane.rowIndex="1" GridPane.columnIndex="1">
+                            <Spinner fx:id="spnTempoStimato" editable="true" prefWidth="100"/>
+                            <Label text="minuti"/>
+                        </HBox>
+                        
+                        <Label text="4. Cuoco disponibile:" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                        <ComboBox fx:id="cmbCuochi" prefWidth="200" maxWidth="Infinity" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+                        
+                        <Label text="Quantità:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                        <Spinner fx:id="spnQuantita" editable="true" prefWidth="100" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                        
+                        <Label text="Importanza:" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+                        <HBox spacing="10" GridPane.rowIndex="2" GridPane.columnIndex="3">
+                            <fx:define>
+                                <ToggleGroup fx:id="grpImportanza"/>
+                            </fx:define>
+                            <RadioButton text="Alta" toggleGroup="$grpImportanza" selected="true"/>
+                            <RadioButton text="Media" toggleGroup="$grpImportanza"/>
+                            <RadioButton text="Bassa" toggleGroup="$grpImportanza"/>
+                        </HBox>
+                        
+                        <Label text="Quantità già pronta:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                        <Spinner fx:id="spnQuantitaDisponibile" editable="true" prefWidth="100" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                        
+
+                        
+                        <Button text="Assegna Compito" onAction="#onAssegnaCompito" 
+                                maxWidth="Infinity" GridPane.rowIndex="4" GridPane.columnIndex="0" 
+                                GridPane.columnSpan="4" style="-fx-base: lightgreen;"/>
+                    </GridPane>
+                </Tab>
+                
+
+            </TabPane>
+        </SplitPane>
+    </center>
+    
+</BorderPane> 
