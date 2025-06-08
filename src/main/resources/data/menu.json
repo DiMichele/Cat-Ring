@@ -1,0 +1,295 @@
+[ {
+  "id" : 1,
+  "titolo" : "Menu Degustazione Classico 2",
+  "note" : "Menu tradizionale italiano per eventi eleganti",
+  "stato" : "Pubblicato",
+  "sezioni" : [ {
+    "id" : 7,
+    "nome" : "Antipasti",
+    "ricette" : [ {
+      "ricettaOriginale" : {
+        "id" : 4,
+        "nome" : "Test Ricetta",
+        "descrizione" : "Descrizione test",
+        "stato" : "Pubblicata",
+        "tempoPreparazione" : 30,
+        "inUso" : false,
+        "tags" : [ ]
+      },
+      "nomePersonalizzato" : "Test Ricetta",
+      "nomeNelMenu" : "Test Ricetta"
+    } ]
+  }, {
+    "id" : 8,
+    "nome" : "Primi Piatti",
+    "ricette" : [ {
+      "ricettaOriginale" : {
+        "id" : 1,
+        "nome" : "Bruschette al Pomodoro",
+        "descrizione" : "Pane tostato con pomodori freschi, basilico e aglio",
+        "stato" : "Pubblicata",
+        "tempoPreparazione" : 15,
+        "inUso" : false,
+        "tags" : [ ]
+      },
+      "nomePersonalizzato" : "Bruschette al Pomodoro",
+      "nomeNelMenu" : "Bruschette al Pomodoro"
+    } ]
+  }, {
+    "id" : 9,
+    "nome" : "Dolci",
+    "ricette" : [ {
+      "ricettaOriginale" : {
+        "id" : 7,
+        "nome" : "Test Ricetta",
+        "descrizione" : "Descrizione test",
+        "stato" : "Pubblicata",
+        "tempoPreparazione" : 30,
+        "inUso" : false,
+        "tags" : [ ]
+      },
+      "nomePersonalizzato" : "Test Ricetta",
+      "nomeNelMenu" : "Test Ricetta"
+    }, {
+      "ricettaOriginale" : {
+        "id" : 7,
+        "nome" : "Test Ricetta",
+        "descrizione" : "Descrizione test",
+        "stato" : "Pubblicata",
+        "tempoPreparazione" : 30,
+        "inUso" : false,
+        "tags" : [ ]
+      },
+      "nomePersonalizzato" : "Test Ricettaa",
+      "nomeNelMenu" : "Test Ricettaa"
+    } ]
+  } ],
+  "caratteristiche" : [ {
+    "nome" : "Elegante",
+    "descrizione" : "Menu per eventi di alta classe"
+  } ]
+}, {
+  "id" : 2,
+  "titolo" : "Nuovo Titolo",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 3,
+  "titolo" : "Menu senza titolo #3",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 4,
+  "titolo" : "Menu senza titolo #4",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 5,
+  "titolo" : "Menu senza titolo #5",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 6,
+  "titolo" : "Menu senza titolo #6",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 7,
+  "titolo" : "Titolo Unico Test 1749648438694",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 8,
+  "titolo" : "Titolo Unico Test 1749648466870",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 9,
+  "titolo" : "Titolo Unico Test 1749651715627",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 10,
+  "titolo" : "Titolo Unico Test 1749651960095",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 11,
+  "titolo" : "Titolo Unico Test 1749652084963",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 12,
+  "titolo" : "Titolo Unico Test 1749660022806",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 13,
+  "titolo" : "Titolo Unico Test 1749660115796",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 14,
+  "titolo" : "Titolo Unico Test 1749660312254",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 15,
+  "titolo" : "Titolo Unico Test 1749660327526",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 16,
+  "titolo" : "Titolo Unico Test 1749661598587",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 17,
+  "titolo" : "Titolo Unico Test 1749662200631",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 18,
+  "titolo" : "Titolo Unico Test 1749662461961",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 19,
+  "titolo" : "Titolo Unico Test 1749662726307",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 20,
+  "titolo" : "Titolo Unico Test 1749662928072",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 21,
+  "titolo" : "Titolo Unico Test 1749663357979",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 22,
+  "titolo" : "Titolo Unico Test 1749663672010",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 23,
+  "titolo" : "Titolo Unico Test 1749664061175",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 24,
+  "titolo" : "Titolo Unico Test 1749664109464",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 25,
+  "titolo" : "Titolo Unico Test 1749664355702",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 26,
+  "titolo" : "Titolo Unico Test 1749681095644",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 27,
+  "titolo" : "Titolo Unico Test 1749682253563",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 28,
+  "titolo" : "Titolo Unico Test 1749682791298",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 29,
+  "titolo" : "Titolo Unico Test 1749683262047",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 30,
+  "titolo" : "Titolo Unico Test 1749683330850",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 31,
+  "titolo" : "Titolo Unico Test 1749683390706",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 32,
+  "titolo" : "Titolo Unico Test 1749683508854",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+}, {
+  "id" : 33,
+  "titolo" : "Titolo Unico Test 1749683656155",
+  "note" : null,
+  "stato" : "Bozza",
+  "sezioni" : [ ],
+  "caratteristiche" : [ ]
+} ]

@@ -1,0 +1,40 @@
+[ {
+  "id" : 1,
+  "ricettaId" : 1,
+  "cuocoId" : 3,
+  "turnoId" : null,
+  "eventoId" : 1,
+  "turno" : "2025-06-11 08:00-14:00",
+  "durata" : 45,
+  "quantita" : 3.0,
+  "stato" : "Da iniziare",
+  "importanza" : 1,
+  "feedback" : "",
+  "tempoStimato" : 45
+}, {
+  "id" : 2,
+  "ricettaId" : 1,
+  "cuocoId" : 4,
+  "turnoId" : null,
+  "eventoId" : 1,
+  "turno" : "2025-06-11 08:00-14:00",
+  "durata" : 40,
+  "quantita" : 2.0,
+  "stato" : "Da iniziare",
+  "importanza" : 1,
+  "feedback" : "",
+  "tempoStimato" : 40
+}, {
+  "id" : 3,
+  "ricettaId" : 1,
+  "cuocoId" : 3,
+  "turnoId" : null,
+  "eventoId" : 1,
+  "turno" : "2025-06-11 08:00-14:00",
+  "durata" : 30,
+  "quantita" : 1.0,
+  "stato" : "Da iniziare",
+  "importanza" : 1,
+  "feedback" : "",
+  "tempoStimato" : 30
+} ]

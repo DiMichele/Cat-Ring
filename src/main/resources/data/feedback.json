@@ -1,0 +1,50 @@
+[ {
+  "id" : 1,
+  "compitoId" : 1,
+  "testo" : "Tutto ok, finito in tempo previsto",
+  "autore" : "Mario Rossi",
+  "dataCreazione" : "2024-01-15T14:30:00",
+  "testoFormattato" : "[15/01/2024 14:30] Mario Rossi: Tutto ok, finito in tempo previsto"
+}, {
+  "id" : 2,
+  "compitoId" : 2,
+  "testo" : "Avevo sottovalutato il tempo, servivano 10 minuti in più",
+  "autore" : "Anna Bianchi",
+  "dataCreazione" : "2024-01-15T15:45:00",
+  "testoFormattato" : "[15/01/2024 15:45] Anna Bianchi: Avevo sottovalutato il tempo, servivano 10 minuti in più"
+}, {
+  "id" : 3,
+  "compitoId" : 3,
+  "testo" : "Preparazione più facile del previsto, finito in anticipo",
+  "autore" : "Giuseppe Verdi",
+  "dataCreazione" : "2024-01-15T16:20:00",
+  "testoFormattato" : "[15/01/2024 16:20] Giuseppe Verdi: Preparazione più facile del previsto, finito in anticipo"
+}, {
+  "id" : 4,
+  "compitoId" : 4,
+  "testo" : "Alcuni prodotti non erano di buona qualità, ho dovuto improvvisare",
+  "autore" : "Maria Neri",
+  "dataCreazione" : "2024-01-15T17:10:00",
+  "testoFormattato" : "[15/01/2024 17:10] Maria Neri: Alcuni prodotti non erano di buona qualità, ho dovuto improvvisare"
+}, {
+  "id" : 5,
+  "compitoId" : 5,
+  "testo" : "Perfetto, nessun problema riscontrato",
+  "autore" : "Franco Blu",
+  "dataCreazione" : "2024-01-15T18:00:00",
+  "testoFormattato" : "[15/01/2024 18:00] Franco Blu: Perfetto, nessun problema riscontrato"
+}, {
+  "id" : 6,
+  "compitoId" : 6,
+  "testo" : "Ho notato che il fornello aveva qualche problema, ma sono riuscito a completare",
+  "autore" : "Luca Gialli",
+  "dataCreazione" : "2024-01-16T12:30:00",
+  "testoFormattato" : "[16/01/2024 12:30] Luca Gialli: Ho notato che il fornello aveva qualche problema, ma sono riuscito a completare"
+}, {
+  "id" : 7,
+  "compitoId" : 1,
+  "testo" : "Test messaggio",
+  "autore" : "Mario Rossi",
+  "dataCreazione" : "2025-06-12T01:09:50",
+  "testoFormattato" : "[12/06/2025 01:09] Mario Rossi: Test messaggio"
+} ]

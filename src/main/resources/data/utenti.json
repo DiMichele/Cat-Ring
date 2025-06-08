@@ -1,0 +1,42 @@
+{
+  "chefs": [
+    {
+      "id": 1,
+      "nome": "Mario",
+      "cognome": "Rossi",
+      "attivo": true
+    },
+    {
+      "id": 2,
+      "nome": "Giuseppe",
+      "cognome": "Bianchi",
+      "attivo": true
+    }
+  ],
+  "cuochi": [
+    {
+      "id": 3,
+      "nome": "Luigi",
+      "cognome": "Verdi",
+      "attivo": true
+    },
+    {
+      "id": 4,
+      "nome": "Anna",
+      "cognome": "Bianchi",
+      "attivo": true
+    },
+    {
+      "id": 5,
+      "nome": "Marco",
+      "cognome": "Neri",
+      "attivo": true
+    },
+    {
+      "id": 6,
+      "nome": "Francesca",
+      "cognome": "Gialli",
+      "attivo": true
+    }
+  ]
+} 
