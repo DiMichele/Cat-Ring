@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="600.0" prefWidth="800.0">
+    
+    <top>
+        <VBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="10" left="20"/>
+            </padding>
+            
+            <Label text="Gestione Menù" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+            
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Nuovo Menù" onAction="#onNuovoMenu"/>
+                <ComboBox fx:id="cmbMenuEsistenti" promptText="Menu esistenti" prefWidth="200"/>
+            </HBox>
+        </VBox>
+    </top>
+    
+    <center>
+        <VBox fx:id="contenitoreMenu" spacing="15" disable="true">
+            <padding>
+                <Insets top="10" right="20" bottom="20" left="20"/>
+            </padding>
+            
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Titolo:" style="-fx-font-weight: bold;"/>
+                <TextField fx:id="txtTitolo" prefWidth="300"/>
+                <Button text="Salva titolo" onAction="#onSalvaTitolo"/>
+            </HBox>
+            
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Evento di riferimento:" style="-fx-font-weight: bold;"/>
+                <ComboBox fx:id="cmbEventoRiferimento" prefWidth="250" promptText="Seleziona evento (opzionale)"/>
+                <Button text="Consulta dettagli" onAction="#onConsultaDettagliEvento"/>
+            </HBox>
+            
+            <Separator/>
+            
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Sezioni (separate da virgola):" style="-fx-font-weight: bold;"/>
+                <TextField fx:id="txtSezioni" prefWidth="300" promptText="Antipasti, Primi, Secondi, Dolci"/>
+                <Button text="Definisci sezioni" onAction="#onDefinisciSezioni"/>
+            </HBox>
+            
+            <HBox spacing="20" VBox.vgrow="ALWAYS">
+                <VBox spacing="10" prefWidth="220">
+                    <Label text="Ricette disponibili:" style="-fx-font-weight: bold;"/>
+                    <ListView fx:id="lstRicetteDisponibili" VBox.vgrow="ALWAYS"/>
+                    <Button text="Inserisci ricetta" onAction="#onInserisciRicetta" maxWidth="Infinity"/>
+                </VBox>
+                
+                <VBox spacing="10" HBox.hgrow="ALWAYS">
+                    <Label text="Sezioni del menù:" style="-fx-font-weight: bold;"/>
+                    <TabPane fx:id="tabSezioni" VBox.vgrow="ALWAYS"/>
+                    <HBox spacing="10">
+                        <Button text="Rimuovi ricetta" onAction="#onRimuoviRicetta" maxWidth="120"/>
+                        <Button text="Sposta ricetta" onAction="#onSpostaRicetta" maxWidth="120"/>
+                        <Button text="Rinomina ricetta" onAction="#onRinominaRicetta" maxWidth="120"/>
+                    </HBox>
+                </VBox>
+            </HBox>
+            
+            <VBox spacing="10">
+                <Label text="Note e informazioni:" style="-fx-font-weight: bold;"/>
+                <TextArea fx:id="txtNote" prefHeight="100"/>
+                <Button text="Salva note" onAction="#onSalvaNote" maxWidth="150" alignment="CENTER_RIGHT"/>
+            </VBox>
+            
+            <HBox spacing="10">
+                <Label text="Caratteristiche menù:" style="-fx-font-weight: bold;"/>
+                <CheckBox fx:id="chkPiattiCaldi" text="Piatti caldi"/>
+                <CheckBox fx:id="chkPiattiFreddi" text="Piatti freddi"/>
+                <CheckBox fx:id="chkAdattoBuffet" text="Adatto a buffet"/>
+                <CheckBox fx:id="chkFingerFood" text="Finger food"/>
+            </HBox>
+        </VBox>
+    </center>
+    
+    <bottom>
+        <HBox spacing="20" alignment="CENTER_RIGHT">
+            <padding>
+                <Insets top="10" right="20" bottom="20" left="20"/>
+            </padding>
+            
+            <Button text="Elimina Menu" onAction="#onEliminaMenu" style="-fx-text-fill: red;"/>
+            <Separator orientation="VERTICAL"/>
+            <Button text="Esporta Menu Excel" onAction="#onEsportaMenuExcel"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="btnCambiaStato" text="Cambia Stato" onAction="#onCambiaStatoMenu"/>
+        </HBox>
+    </bottom>
+    
+</BorderPane> 

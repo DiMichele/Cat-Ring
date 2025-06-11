@@ -1,0 +1,64 @@
+[ {
+  "id" : 1,
+  "nome" : "Bruschette al Pomodoro",
+  "descrizione" : "Pane tostato con pomodori freschi, basilico e aglio",
+  "stato" : "Pubblicata",
+  "tempoPreparazione" : 15,
+  "inUso" : false,
+  "tags" : [ ],
+  "istruzioni" : [ ]
+}, {
+  "id" : 2,
+  "nome" : "Test Ricetta",
+  "descrizione" : "Descrizione test",
+  "stato" : "Pubblicata",
+  "tempoPreparazione" : 30,
+  "inUso" : false,
+  "tags" : [ ],
+  "istruzioni" : [ ]
+}, {
+  "id" : 3,
+  "nome" : "Test Ricetta",
+  "descrizione" : "Descrizione test",
+  "stato" : "Pubblicata",
+  "tempoPreparazione" : 30,
+  "inUso" : false,
+  "tags" : [ ],
+  "istruzioni" : [ ]
+}, {
+  "id" : 4,
+  "nome" : "Test Ricetta",
+  "descrizione" : "Descrizione test",
+  "stato" : "Pubblicata",
+  "tempoPreparazione" : 30,
+  "inUso" : false,
+  "tags" : [ ],
+  "istruzioni" : [ ]
+}, {
+  "id" : 5,
+  "nome" : "Test Ricetta",
+  "descrizione" : "Descrizione test",
+  "stato" : "Pubblicata",
+  "tempoPreparazione" : 30,
+  "inUso" : false,
+  "tags" : [ ],
+  "istruzioni" : [ ]
+}, {
+  "id" : 6,
+  "nome" : "Test Ricetta",
+  "descrizione" : "Descrizione test",
+  "stato" : "Pubblicata",
+  "tempoPreparazione" : 30,
+  "inUso" : false,
+  "tags" : [ ],
+  "istruzioni" : [ ]
+}, {
+  "id" : 7,
+  "nome" : "Test Ricetta",
+  "descrizione" : "Descrizione test",
+  "stato" : "Pubblicata",
+  "tempoPreparazione" : 30,
+  "inUso" : false,
+  "tags" : [ ],
+  "istruzioni" : [ ]
+} ]

@@ -1,0 +1,132 @@
+[
+  {
+    "id": 1,
+    "titolo": "Matrimonio Villa Rosa - Bianchi & Rossi",
+    "descrizione": "Elegante ricevimento di nozze con cerimonia nel parco e cena servita nella sala principale.",
+    "data": "2025-06-15T17:30:00",
+    "luogo": "Villa Rosa Antica, Via del Parco 25, Milano",
+    "menuId": 1,
+    "stato": "Confermato",
+    "numeroPartecipanti": 120
+  },
+  {
+    "id": 2,
+    "titolo": "Conferenza Innovazione Digitale 2025",
+    "descrizione": "Conferenza aziendale con keynote speakers internazionali. Richiesto coffee break mattutino, pranzo a buffet e aperitivo conclusivo.",
+    "data": "2025-09-20T08:30:00",
+    "luogo": "Centro Congressi Internazionale, Piazza Europa 10, Roma",
+    "menuId": 2,
+    "stato": "Confermato",
+    "numeroPartecipanti": 180
+  },
+  {
+    "id": 3,
+    "titolo": "Gala Benefico Fondazione Salute",
+    "descrizione": "Cena di gala per raccolta fondi con asta benefica.",
+    "data": "2025-11-30T19:00:00",
+    "luogo": "Hotel Excelsior Palace, Firenze",
+    "menuId": 3,
+    "stato": "In attesa di conferma",
+    "numeroPartecipanti": 200
+  },
+  {
+    "id": 4,
+    "titolo": "Festival del Cibo Sostenibile",
+    "descrizione": "Festival all'aperto dedicato alla cucina sostenibile e vegetariana. Richiesti stand gastronomici, showcooking e area degustazione.",
+    "data": "2025-07-12T11:00:00",
+    "luogo": "Parco delle Cascine, Viale degli Olmi, Firenze",
+    "cliente": {
+      "id": 5,
+      "nome": "Associazione",
+      "cognome": "Terra Viva",
+      "email": "eventi@terraviva.org",
+      "telefono": "0557654321"
+    },
+    "menu": {
+      "id": 2,
+      "nome": "Menu Vegetariano"
+    },
+    "stato": "Confermato",
+    "numeroPartecipanti": 500
+  },
+  {
+    "id": 5,
+    "titolo": "Compleanno 50 anni Dott. Esposito",
+    "descrizione": "Festa di compleanno a sorpresa con tema 'Anni '70'. Richiesto buffet, open bar e DJ set con musica dell'epoca.",
+    "data": "2025-08-25T20:00:00",
+    "luogo": "Villa Marechiaro, Via Posillipo 121, Napoli",
+    "cliente": {
+      "id": 6,
+      "nome": "Giulia",
+      "cognome": "Esposito",
+      "email": "g.esposito@example.com",
+      "telefono": "3331234567"
+    },
+    "menu": {
+      "id": 5,
+      "nome": "Menu Degustazione Regionale"
+    },
+    "stato": "Confermato",
+    "numeroPartecipanti": 60
+  },
+  {
+    "id": 6,
+    "titolo": "Lancio Prodotto AutoFuture EV-1",
+    "descrizione": "Evento di presentazione del nuovo veicolo elettrico. Richiesto catering contemporaneo, show cooking e cocktail area.",
+    "data": "2025-10-10T18:00:00",
+    "luogo": "Spazio Innovazione, Via Tortona 54, Milano",
+    "cliente": {
+      "id": 7,
+      "nome": "AutoFuture",
+      "cognome": "Italia SpA",
+      "email": "marketing@autofuture.com",
+      "telefono": "0248765432"
+    },
+    "menu": {
+      "id": 7,
+      "nome": "Menu Finger Food Deluxe"
+    },
+    "stato": "In attesa di conferma",
+    "numeroPartecipanti": 150
+  },
+  {
+    "id": 7,
+    "titolo": "Workshop Fotografia Gastronomica",
+    "descrizione": "Workshop di due giorni sulla fotografia gastronomica professionale con chef e fotografi internazionali. Richiesti pasti completi e showcooking.",
+    "data": "2025-04-18T09:00:00",
+    "luogo": "Accademia Gastronomica Italiana, Via delle Spezie 12, Bologna",
+    "cliente": {
+      "id": 8,
+      "nome": "Foto&Food",
+      "cognome": "Academy",
+      "email": "corsi@fotofood.it",
+      "telefono": "0512345678"
+    },
+    "menu": {
+      "id": 6,
+      "nome": "Menu Degustazione Chef"
+    },
+    "stato": "Confermato",
+    "numeroPartecipanti": 40
+  },
+  {
+    "id": 8,
+    "titolo": "Cena Aziendale di Fine Anno",
+    "descrizione": "Cena aziendale di fine anno con premiazione dipendenti e spettacolo. Menu richiesto con opzioni per intolleranze e diete speciali.",
+    "data": "2025-12-18T19:30:00",
+    "luogo": "Grand Hotel Mediterraneo, Lungarno del Tempio 44, Firenze",
+    "cliente": {
+      "id": 9,
+      "nome": "Gruppo",
+      "cognome": "Tecnomed Srl",
+      "email": "hr@tecnomed.com",
+      "telefono": "0552345678"
+    },
+    "menu": {
+      "id": 5,
+      "nome": "Menu Degustazione Regionale"
+    },
+    "stato": "Confermato",
+    "numeroPartecipanti": 85
+  }
+] 
