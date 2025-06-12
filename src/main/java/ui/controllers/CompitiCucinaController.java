@@ -24,6 +24,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
+import javafx.scene.layout.Region;
 import javafx.scene.text.Text;
 import javafx.util.StringConverter;
 import java.text.DecimalFormat;
@@ -461,6 +462,10 @@ public class CompitiCucinaController {
             List<Compito> compiti = entry.getValue();
             
             VBox gruppoTurno = creaGruppoCompiti("Turno: " + turno, compiti);
+            
+            // Configura il gruppo per espandersi orizzontalmente nel VBox contenitore
+            VBox.setVgrow(gruppoTurno, Priority.NEVER);
+            
             vboxVistaRaggruppata.getChildren().add(gruppoTurno);
         }
     }
@@ -473,6 +478,10 @@ public class CompitiCucinaController {
     private VBox creaGruppoCompiti(String titolo, List<Compito> compiti) {
         VBox gruppo = new VBox(5);
         gruppo.setStyle("-fx-border-color: lightgray; -fx-border-width: 1; -fx-padding: 10;");
+        
+        // Configura il VBox per occupare tutta la larghezza disponibile
+        gruppo.setMaxWidth(Double.MAX_VALUE);
+        gruppo.setPrefWidth(Region.USE_COMPUTED_SIZE);
         
         // Titolo del gruppo
         Label lblTitolo = new Label(titolo);
@@ -488,11 +497,14 @@ public class CompitiCucinaController {
         TableView<Compito> tabellaGruppo = new TableView<>();
         tabellaGruppo.setPrefHeight(Math.max(150, compiti.size() * 25 + 50));
         
+        // Configura la tabella per espandersi orizzontalmente
+        tabellaGruppo.setMaxWidth(Double.MAX_VALUE);
+        HBox.setHgrow(tabellaGruppo, Priority.ALWAYS);
+        
         // Clona le colonne della tabella principale
         TableColumn<Compito, String> colRicettaGruppo = new TableColumn<>("Ricetta");
         colRicettaGruppo.setCellValueFactory(cellData -> 
             new SimpleStringProperty(cellData.getValue().getRicetta().getNome()));
-        colRicettaGruppo.setPrefWidth(180);
         
         TableColumn<Compito, String> colCuocoGruppo = new TableColumn<>("Cuoco");
         colCuocoGruppo.setCellValueFactory(cellData -> {
@@ -500,11 +512,9 @@ public class CompitiCucinaController {
             return new SimpleStringProperty(cuoco != null ? 
                 cuoco.getNome() + " " + cuoco.getCognome() : "Non assegnato");
         });
-        colCuocoGruppo.setPrefWidth(140);
         
         TableColumn<Compito, String> colStatoGruppo = new TableColumn<>("Stato");
         colStatoGruppo.setCellValueFactory(cellData -> cellData.getValue().statoProperty());
-        colStatoGruppo.setPrefWidth(100);
         
         TableColumn<Compito, String> colImportanzaGruppo = new TableColumn<>("Importanza");
         colImportanzaGruppo.setCellValueFactory(cellData -> {
@@ -512,11 +522,9 @@ public class CompitiCucinaController {
             String testoImportanza = importanza == 5 ? "Alta" : importanza == 3 ? "Media" : "Bassa";
             return new SimpleStringProperty(testoImportanza);
         });
-        colImportanzaGruppo.setPrefWidth(100);
         
         TableColumn<Compito, Integer> colTempoGruppo = new TableColumn<>("Tempo");
         colTempoGruppo.setCellValueFactory(new PropertyValueFactory<>("tempoStimato"));
-        colTempoGruppo.setPrefWidth(80);
         
         TableColumn<Compito, String> colFeedbackGruppo = new TableColumn<>("Feedback");
         colFeedbackGruppo.setCellValueFactory(cellData -> {
@@ -528,11 +536,13 @@ public class CompitiCucinaController {
                 return new SimpleStringProperty(preview);
             }
         });
-        colFeedbackGruppo.setPrefWidth(120);
         
-        tabellaGruppo.getColumns().addAll(colRicettaGruppo, colCuocoGruppo, 
-            colStatoGruppo, colImportanzaGruppo, colTempoGruppo, colFeedbackGruppo);
+        tabellaGruppo.getColumns().addAll(List.of(colRicettaGruppo, colCuocoGruppo, 
+            colStatoGruppo, colImportanzaGruppo, colTempoGruppo, colFeedbackGruppo));
         tabellaGruppo.setItems(FXCollections.observableArrayList(compiti));
+        
+        // Configura la tabella per occupare tutta la larghezza disponibile
+        tabellaGruppo.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
         
         // Abilita modifica compiti nella vista raggruppata (senza modifica stato)
         tabellaGruppo.setRowFactory(tv -> {
@@ -784,7 +794,7 @@ public class CompitiCucinaController {
         colTempoExist.setCellValueFactory(new PropertyValueFactory<>("tempoStimato"));
         colTempoExist.setPrefWidth(90);
         
-        tabellaCompiti.getColumns().addAll(colCuoco, colTurno, colQuantitaExist, colStatoExist, colTempoExist);
+        tabellaCompiti.getColumns().addAll(List.of(colCuoco, colTurno, colQuantitaExist, colStatoExist, colTempoExist));
         tabellaCompiti.setItems(FXCollections.observableArrayList(compitiEsistenti));
         
         // Pulsanti di azione
@@ -1185,12 +1195,9 @@ public class CompitiCucinaController {
                 .mapToInt(Compito::getTempoStimato)
                 .sum();
             
-            // Dettaglio compiti con nome evento
+            // Dettaglio compiti con ricetta e tempo 
             String dettaglio = compitiCuoco.stream()
-                .map(c -> {
-                    String nomeEvento = c.getEvento() != null ? c.getEvento().getNome() : "Evento sconosciuto";
-                    return c.getRicetta().getNome() + " (" + c.getTempoStimato() + "min) - " + nomeEvento;
-                })
+                .map(c -> c.getRicetta().getNome() + " (" + c.getTempoStimato() + "min)")
                 .collect(Collectors.joining(", "));
             
             if (dettaglio.isEmpty()) {
@@ -1434,6 +1441,9 @@ public class CompitiCucinaController {
             colTempoTotale.setCellValueFactory(cellData -> cellData.getValue().tempoTotaleProperty().asObject());
             colCompitiDettaglio.setCellValueFactory(cellData -> cellData.getValue().compitiDettaglioProperty());
             colDisponibilita.setCellValueFactory(cellData -> cellData.getValue().disponibilitaProperty());
+            
+                    // Configura le colonne per occupare tutta la larghezza disponibile
+        tblCaricoCuochi.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
         }
     }
     
@@ -1447,6 +1457,9 @@ public class CompitiCucinaController {
         colOraFine.setCellValueFactory(new PropertyValueFactory<>("oraFine"));
         colLuogo.setCellValueFactory(new PropertyValueFactory<>("luogo"));
         colTipo.setCellValueFactory(new PropertyValueFactory<>("tipo"));
+        
+        // Configura la tabella per occupare tutta la larghezza disponibile
+        tblTurni.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
         
         // Imposta i dati nella tabella
         tblTurni.setItems(compitoCucinaService.getTurni());
@@ -1515,7 +1528,10 @@ public class CompitiCucinaController {
         colTipo.setPrefWidth(100);
         
         // Aggiungi le colonne alla tabella
-        tableTurni.getColumns().addAll(colData, colOraInizio, colOraFine, colLuogo, colTipo);
+        tableTurni.getColumns().addAll(List.of(colData, colOraInizio, colOraFine, colLuogo, colTipo));
+        
+        // Configura la tabella per occupare tutta la larghezza disponibile
+        tableTurni.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
         
         // Aggiungi i dati
         tableTurni.setItems(compitoCucinaService.getTurni());

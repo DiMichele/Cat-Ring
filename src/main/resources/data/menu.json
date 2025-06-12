@@ -1,27 +1,15 @@
 [ {
   "id" : 1,
-  "titolo" : "Menu Degustazione Classico 2",
-  "note" : "Menu tradizionale italiano per eventi eleganti",
+  "titolo" : "Menu Matrimonio Villa Rosa",
+  "note" : "Menu raffinato per il matrimonio Bianchi-Rossi, 120 persone",
   "stato" : "Pubblicato",
+  "caratteristiche" : [ {
+    "nome" : "Elegante",
+    "descrizione" : "Menu per eventi di alta classe"
+  } ],
   "sezioni" : [ {
-    "id" : 7,
+    "id" : 1,
     "nome" : "Antipasti",
-    "ricette" : [ {
-      "ricettaOriginale" : {
-        "id" : 4,
-        "nome" : "Test Ricetta",
-        "descrizione" : "Descrizione test",
-        "stato" : "Pubblicata",
-        "tempoPreparazione" : 30,
-        "inUso" : false,
-        "tags" : [ ]
-      },
-      "nomePersonalizzato" : "Test Ricetta",
-      "nomeNelMenu" : "Test Ricetta"
-    } ]
-  }, {
-    "id" : 8,
-    "nome" : "Primi Piatti",
     "ricette" : [ {
       "ricettaOriginale" : {
         "id" : 1,
@@ -29,267 +17,259 @@
         "descrizione" : "Pane tostato con pomodori freschi, basilico e aglio",
         "stato" : "Pubblicata",
         "tempoPreparazione" : 15,
-        "inUso" : false,
-        "tags" : [ ]
+        "inUso" : true,
+        "tags" : [ {
+          "nome" : "Antipasto",
+          "descrizione" : null,
+          "colore" : null
+        }, {
+          "nome" : "Vegetariano",
+          "descrizione" : null,
+          "colore" : null
+        }, {
+          "nome" : "Italiano",
+          "descrizione" : null,
+          "colore" : null
+        } ]
       },
       "nomePersonalizzato" : "Bruschette al Pomodoro",
       "nomeNelMenu" : "Bruschette al Pomodoro"
+    }, {
+      "ricettaOriginale" : {
+        "id" : 3,
+        "nome" : "Carpaccio di Manzo",
+        "descrizione" : "Fettine sottili di manzo con rucola, grana e limone",
+        "stato" : "Pubblicata",
+        "tempoPreparazione" : 20,
+        "inUso" : true,
+        "tags" : [ {
+          "nome" : "Antipasto",
+          "descrizione" : null,
+          "colore" : null
+        }, {
+          "nome" : "Carne",
+          "descrizione" : null,
+          "colore" : null
+        }, {
+          "nome" : "Freddo",
+          "descrizione" : null,
+          "colore" : null
+        } ]
+      },
+      "nomePersonalizzato" : "Carpaccio di Manzo con Scaglie di Grana",
+      "nomeNelMenu" : "Carpaccio di Manzo con Scaglie di Grana"
     } ]
   }, {
-    "id" : 9,
+    "id" : 2,
+    "nome" : "Primi Piatti",
+    "ricette" : [ {
+      "ricettaOriginale" : {
+        "id" : 2,
+        "nome" : "Risotto alla Milanese",
+        "descrizione" : "Risotto cremoso con zafferano, midollo e parmigiano",
+        "stato" : "Pubblicata",
+        "tempoPreparazione" : 45,
+        "inUso" : true,
+        "tags" : [ {
+          "nome" : "Primo",
+          "descrizione" : null,
+          "colore" : null
+        }, {
+          "nome" : "Tradizionale",
+          "descrizione" : null,
+          "colore" : null
+        }, {
+          "nome" : "Lombardo",
+          "descrizione" : null,
+          "colore" : null
+        } ]
+      },
+      "nomePersonalizzato" : "Risotto all'Oro Milanese",
+      "nomeNelMenu" : "Risotto all'Oro Milanese"
+    } ]
+  }, {
+    "id" : 3,
+    "nome" : "Secondi Piatti",
+    "ricette" : [ {
+      "ricettaOriginale" : {
+        "id" : 5,
+        "nome" : "Salmone in Crosta di Erbe",
+        "descrizione" : "Filetto di salmone con crosta di erbe aromatiche e pangrattato",
+        "stato" : "Pubblicata",
+        "tempoPreparazione" : 35,
+        "inUso" : true,
+        "tags" : [ {
+          "nome" : "Secondo",
+          "descrizione" : null,
+          "colore" : null
+        }, {
+          "nome" : "Pesce",
+          "descrizione" : null,
+          "colore" : null
+        }, {
+          "nome" : "Elegante",
+          "descrizione" : null,
+          "colore" : null
+        } ]
+      },
+      "nomePersonalizzato" : "Salmone in Crosta di Erbe",
+      "nomeNelMenu" : "Salmone in Crosta di Erbe"
+    } ]
+  }, {
+    "id" : 4,
     "nome" : "Dolci",
     "ricette" : [ {
       "ricettaOriginale" : {
-        "id" : 7,
-        "nome" : "Test Ricetta",
-        "descrizione" : "Descrizione test",
+        "id" : 6,
+        "nome" : "Tiramisù Classico",
+        "descrizione" : "Dolce al cucchiaio con savoiardi, caffè e mascarpone",
         "stato" : "Pubblicata",
         "tempoPreparazione" : 30,
-        "inUso" : false,
-        "tags" : [ ]
+        "inUso" : true,
+        "tags" : [ {
+          "nome" : "Dolce",
+          "descrizione" : null,
+          "colore" : null
+        }, {
+          "nome" : "Tradizionale",
+          "descrizione" : null,
+          "colore" : null
+        }, {
+          "nome" : "Freddo",
+          "descrizione" : null,
+          "colore" : null
+        } ]
       },
-      "nomePersonalizzato" : "Test Ricetta",
-      "nomeNelMenu" : "Test Ricetta"
-    }, {
-      "ricettaOriginale" : {
-        "id" : 7,
-        "nome" : "Test Ricetta",
-        "descrizione" : "Descrizione test",
-        "stato" : "Pubblicata",
-        "tempoPreparazione" : 30,
-        "inUso" : false,
-        "tags" : [ ]
-      },
-      "nomePersonalizzato" : "Test Ricettaa",
-      "nomeNelMenu" : "Test Ricettaa"
+      "nomePersonalizzato" : "Tiramisù dello Chef",
+      "nomeNelMenu" : "Tiramisù dello Chef"
     } ]
-  } ],
-  "caratteristiche" : [ {
-    "nome" : "Elegante",
-    "descrizione" : "Menu per eventi di alta classe"
   } ]
 }, {
   "id" : 2,
-  "titolo" : "Nuovo Titolo",
-  "note" : null,
+  "titolo" : "Menu Business Conference",
+  "note" : "Menu per conferenza aziendale, pranzo buffet 180 persone",
   "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
+  "caratteristiche" : [ {
+    "nome" : "Buffet",
+    "descrizione" : "Servizio a buffet per grandi numeri"
+  } ],
+  "sezioni" : [ {
+    "id" : 5,
+    "nome" : "Piatti Principali",
+    "ricette" : [ {
+      "ricettaOriginale" : {
+        "id" : 4,
+        "nome" : "Lasagne alla Bolognese",
+        "descrizione" : "Lasagne con ragù tradizionale, besciamella e parmigiano",
+        "stato" : "Pubblicata",
+        "tempoPreparazione" : 120,
+        "inUso" : true,
+        "tags" : [ {
+          "nome" : "Primo",
+          "descrizione" : null,
+          "colore" : null
+        }, {
+          "nome" : "Tradizionale",
+          "descrizione" : null,
+          "colore" : null
+        }, {
+          "nome" : "Emiliano",
+          "descrizione" : null,
+          "colore" : null
+        } ]
+      },
+      "nomePersonalizzato" : "Lasagne della Casa",
+      "nomeNelMenu" : "Lasagne della Casa"
+    }, {
+      "ricettaOriginale" : {
+        "id" : 8,
+        "nome" : "Pasta al Pesto Genovese",
+        "descrizione" : "Trofie con pesto di basilico, pinoli e parmigiano",
+        "stato" : "Pubblicata",
+        "tempoPreparazione" : 25,
+        "inUso" : true,
+        "tags" : [ {
+          "nome" : "Primo",
+          "descrizione" : null,
+          "colore" : null
+        }, {
+          "nome" : "Vegetariano",
+          "descrizione" : null,
+          "colore" : null
+        }, {
+          "nome" : "Ligure",
+          "descrizione" : null,
+          "colore" : null
+        } ]
+      },
+      "nomePersonalizzato" : "Pasta al Pesto Genovese",
+      "nomeNelMenu" : "Pasta al Pesto Genovese"
+    } ]
+  }, {
+    "id" : 6,
+    "nome" : "Dessert",
+    "ricette" : [ {
+      "ricettaOriginale" : {
+        "id" : 9,
+        "nome" : "Panna Cotta ai Frutti di Bosco",
+        "descrizione" : "Dessert cremoso con coulis di frutti di bosco",
+        "stato" : "Pubblicata",
+        "tempoPreparazione" : 25,
+        "inUso" : true,
+        "tags" : [ {
+          "nome" : "Dolce",
+          "descrizione" : null,
+          "colore" : null
+        }, {
+          "nome" : "Freddo",
+          "descrizione" : null,
+          "colore" : null
+        }, {
+          "nome" : "Elegante",
+          "descrizione" : null,
+          "colore" : null
+        } ]
+      },
+      "nomePersonalizzato" : "Panna Cotta ai Frutti di Bosco",
+      "nomeNelMenu" : "Panna Cotta ai Frutti di Bosco"
+    } ]
+  } ]
 }, {
   "id" : 3,
-  "titolo" : "Menu senza titolo #3",
-  "note" : null,
+  "titolo" : "Menu Vegetariano Festival",
+  "note" : "Menu vegetariano per Festival del Cibo Sostenibile",
   "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 4,
-  "titolo" : "Menu senza titolo #4",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 5,
-  "titolo" : "Menu senza titolo #5",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 6,
-  "titolo" : "Menu senza titolo #6",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 7,
-  "titolo" : "Titolo Unico Test 1749648438694",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 8,
-  "titolo" : "Titolo Unico Test 1749648466870",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 9,
-  "titolo" : "Titolo Unico Test 1749651715627",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 10,
-  "titolo" : "Titolo Unico Test 1749651960095",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 11,
-  "titolo" : "Titolo Unico Test 1749652084963",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 12,
-  "titolo" : "Titolo Unico Test 1749660022806",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 13,
-  "titolo" : "Titolo Unico Test 1749660115796",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 14,
-  "titolo" : "Titolo Unico Test 1749660312254",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 15,
-  "titolo" : "Titolo Unico Test 1749660327526",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 16,
-  "titolo" : "Titolo Unico Test 1749661598587",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 17,
-  "titolo" : "Titolo Unico Test 1749662200631",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 18,
-  "titolo" : "Titolo Unico Test 1749662461961",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 19,
-  "titolo" : "Titolo Unico Test 1749662726307",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 20,
-  "titolo" : "Titolo Unico Test 1749662928072",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 21,
-  "titolo" : "Titolo Unico Test 1749663357979",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 22,
-  "titolo" : "Titolo Unico Test 1749663672010",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 23,
-  "titolo" : "Titolo Unico Test 1749664061175",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 24,
-  "titolo" : "Titolo Unico Test 1749664109464",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 25,
-  "titolo" : "Titolo Unico Test 1749664355702",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 26,
-  "titolo" : "Titolo Unico Test 1749681095644",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 27,
-  "titolo" : "Titolo Unico Test 1749682253563",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 28,
-  "titolo" : "Titolo Unico Test 1749682791298",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 29,
-  "titolo" : "Titolo Unico Test 1749683262047",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 30,
-  "titolo" : "Titolo Unico Test 1749683330850",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 31,
-  "titolo" : "Titolo Unico Test 1749683390706",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 32,
-  "titolo" : "Titolo Unico Test 1749683508854",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
-}, {
-  "id" : 33,
-  "titolo" : "Titolo Unico Test 1749683656155",
-  "note" : null,
-  "stato" : "Bozza",
-  "sezioni" : [ ],
-  "caratteristiche" : [ ]
+  "caratteristiche" : [ {
+    "nome" : "Vegetariano",
+    "descrizione" : "100% vegetariano"
+  } ],
+  "sezioni" : [ {
+    "id" : 7,
+    "nome" : "Antipasti",
+    "ricette" : [ {
+      "ricettaOriginale" : {
+        "id" : 7,
+        "nome" : "Insalata Caprese",
+        "descrizione" : "Mozzarella di bufala, pomodori e basilico fresco",
+        "stato" : "Pubblicata",
+        "tempoPreparazione" : 10,
+        "inUso" : true,
+        "tags" : [ {
+          "nome" : "Antipasto",
+          "descrizione" : null,
+          "colore" : null
+        }, {
+          "nome" : "Vegetariano",
+          "descrizione" : null,
+          "colore" : null
+        }, {
+          "nome" : "Estivo",
+          "descrizione" : null,
+          "colore" : null
+        } ]
+      },
+      "nomePersonalizzato" : "Caprese Bio con Bufala DOP",
+      "nomeNelMenu" : "Caprese Bio con Bufala DOP"
+    } ]
+  } ]
 } ]

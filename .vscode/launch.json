@@ -3,31 +3,11 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch JavaFX Application (Windows)",
+            "name": "Main",
             "request": "launch",
-            "mainClass": "software.Main",
-            "vmArgs": "--module-path \"${env:USERPROFILE}\\.m2\\repository\\org\\openjfx\\javafx-controls\\21.0.2\\javafx-controls-21.0.2.jar;${env:USERPROFILE}\\.m2\\repository\\org\\openjfx\\javafx-fxml\\21.0.2\\javafx-fxml-21.0.2.jar;${env:USERPROFILE}\\.m2\\repository\\org\\openjfx\\javafx-base\\21.0.2\\javafx-base-21.0.2.jar;${env:USERPROFILE}\\.m2\\repository\\org\\openjfx\\javafx-graphics\\21.0.2\\javafx-graphics-21.0.2.jar\" --add-modules javafx.controls,javafx.fxml,javafx.base,javafx.graphics",
-            "windows": {
-                "vmArgs": "--module-path \"${env:USERPROFILE}\\.m2\\repository\\org\\openjfx\\javafx-controls\\21.0.2\\javafx-controls-21.0.2.jar;${env:USERPROFILE}\\.m2\\repository\\org\\openjfx\\javafx-fxml\\21.0.2\\javafx-fxml-21.0.2.jar;${env:USERPROFILE}\\.m2\\repository\\org\\openjfx\\javafx-base\\21.0.2\\javafx-base-21.0.2.jar;${env:USERPROFILE}\\.m2\\repository\\org\\openjfx\\javafx-graphics\\21.0.2\\javafx-graphics-21.0.2.jar\" --add-modules javafx.controls,javafx.fxml,javafx.base,javafx.graphics"
-            },
-            "osx": {
-                "vmArgs": "--module-path \"${env:HOME}/.m2/repository/org/openjfx/javafx-controls/21.0.2/javafx-controls-21.0.2.jar:${env:HOME}/.m2/repository/org/openjfx/javafx-fxml/21.0.2/javafx-fxml-21.0.2.jar:${env:HOME}/.m2/repository/org/openjfx/javafx-base/21.0.2/javafx-base-21.0.2.jar:${env:HOME}/.m2/repository/org/openjfx/javafx-graphics/21.0.2/javafx-graphics-21.0.2.jar\" --add-modules javafx.controls,javafx.fxml,javafx.base,javafx.graphics"
-            }
-        },
-        {
-            "type": "java",
-            "name": "Launch JavaFX Application (MacOS)",
-            "request": "launch",
-            "mainClass": "software.Main",
-            "vmArgs": "--module-path \"${env:HOME}/.m2/repository/org/openjfx/javafx-controls/21.0.2/javafx-controls-21.0.2.jar:${env:HOME}/.m2/repository/org/openjfx/javafx-fxml/21.0.2/javafx-fxml-21.0.2.jar:${env:HOME}/.m2/repository/org/openjfx/javafx-base/21.0.2/javafx-base-21.0.2.jar:${env:HOME}/.m2/repository/org/openjfx/javafx-graphics/21.0.2/javafx-graphics-21.0.2.jar\" --add-modules javafx.controls,javafx.fxml,javafx.base,javafx.graphics"
-        },
-        {
-            "type": "java",
-            "name": "Launch JavaFX with Maven",
-            "request": "launch",
-            "mainClass": "software.Main",
+            "mainClass": "Main",
             "projectName": "catering-management",
-            "cwd": "${workspaceFolder}",
+            "vmArgs": "--module-path \"${workspaceFolder}/target/dependency/javafx-controls-21.0.2-win.jar;${workspaceFolder}/target/dependency/javafx-fxml-21.0.2-win.jar;${workspaceFolder}/target/dependency/javafx-base-21.0.2-win.jar;${workspaceFolder}/target/dependency/javafx-graphics-21.0.2-win.jar\" --add-modules javafx.controls,javafx.fxml --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED",
             "preLaunchTask": "mvn-compile"
         }
     ]

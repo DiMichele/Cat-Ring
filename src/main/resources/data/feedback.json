@@ -1,50 +1,98 @@
-[ {
-  "id" : 1,
-  "compitoId" : 1,
-  "testo" : "Tutto ok, finito in tempo previsto",
-  "autore" : "Mario Rossi",
-  "dataCreazione" : "2024-01-15T14:30:00",
-  "testoFormattato" : "[15/01/2024 14:30] Mario Rossi: Tutto ok, finito in tempo previsto"
-}, {
-  "id" : 2,
-  "compitoId" : 2,
-  "testo" : "Avevo sottovalutato il tempo, servivano 10 minuti in più",
-  "autore" : "Anna Bianchi",
-  "dataCreazione" : "2024-01-15T15:45:00",
-  "testoFormattato" : "[15/01/2024 15:45] Anna Bianchi: Avevo sottovalutato il tempo, servivano 10 minuti in più"
-}, {
-  "id" : 3,
-  "compitoId" : 3,
-  "testo" : "Preparazione più facile del previsto, finito in anticipo",
-  "autore" : "Giuseppe Verdi",
-  "dataCreazione" : "2024-01-15T16:20:00",
-  "testoFormattato" : "[15/01/2024 16:20] Giuseppe Verdi: Preparazione più facile del previsto, finito in anticipo"
-}, {
-  "id" : 4,
-  "compitoId" : 4,
-  "testo" : "Alcuni prodotti non erano di buona qualità, ho dovuto improvvisare",
-  "autore" : "Maria Neri",
-  "dataCreazione" : "2024-01-15T17:10:00",
-  "testoFormattato" : "[15/01/2024 17:10] Maria Neri: Alcuni prodotti non erano di buona qualità, ho dovuto improvvisare"
-}, {
-  "id" : 5,
-  "compitoId" : 5,
-  "testo" : "Perfetto, nessun problema riscontrato",
-  "autore" : "Franco Blu",
-  "dataCreazione" : "2024-01-15T18:00:00",
-  "testoFormattato" : "[15/01/2024 18:00] Franco Blu: Perfetto, nessun problema riscontrato"
-}, {
-  "id" : 6,
-  "compitoId" : 6,
-  "testo" : "Ho notato che il fornello aveva qualche problema, ma sono riuscito a completare",
-  "autore" : "Luca Gialli",
-  "dataCreazione" : "2024-01-16T12:30:00",
-  "testoFormattato" : "[16/01/2024 12:30] Luca Gialli: Ho notato che il fornello aveva qualche problema, ma sono riuscito a completare"
-}, {
-  "id" : 7,
-  "compitoId" : 1,
-  "testo" : "Test messaggio",
-  "autore" : "Mario Rossi",
-  "dataCreazione" : "2025-06-12T01:09:50",
-  "testoFormattato" : "[12/06/2025 01:09] Mario Rossi: Test messaggio"
-} ]
+[
+  {
+    "id": 1,
+    "compitoId": 1,
+    "testo": "Bruschette completate perfettamente! 120 porzioni pronte per il servizio. Pomodori molto freschi e basilico aromatico.",
+    "autore": "Luigi Verdi",
+    "dataCreazione": "2025-06-15T11:30:00",
+    "testoFormattato": "[15/06/2025 11:30] Luigi Verdi: Bruschette completate perfettamente! 120 porzioni pronte per il servizio. Pomodori molto freschi e basilico aromatico."
+  },
+  {
+    "id": 2,
+    "compitoId": 2,
+    "testo": "Carpaccio di manzo completato e conservato correttamente in cella frigorifera. Taglio impeccabile, presentazione elegante.",
+    "autore": "Anna Bianchi",
+    "dataCreazione": "2025-06-15T12:45:00",
+    "testoFormattato": "[15/06/2025 12:45] Anna Bianchi: Carpaccio di manzo completato e conservato correttamente in cella frigorifera. Taglio impeccabile, presentazione elegante."
+  },
+  {
+    "id": 3,
+    "compitoId": 3,
+    "testo": "Risotto alla milanese terminato con successo. Mantecatura perfetta, colore dorato intenso. Pronto per il servizio serale.",
+    "autore": "Marco Neri",
+    "dataCreazione": "2025-06-15T17:20:00",
+    "testoFormattato": "[15/06/2025 17:20] Marco Neri: Risotto alla milanese terminato con successo. Mantecatura perfetta, colore dorato intenso. Pronto per il servizio serale."
+  },
+  {
+    "id": 4,
+    "compitoId": 4,
+    "testo": "Salmone in crosta completato. Cottura ottimale, crosta dorata e croccante. Tutti i 120 filetti pronti.",
+    "autore": "Francesca Gialli",
+    "dataCreazione": "2025-06-15T18:15:00",
+    "testoFormattato": "[15/06/2025 18:15] Francesca Gialli: Salmone in crosta completato. Cottura ottimale, crosta dorata e croccante. Tutti i 120 filetti pronti."
+  },
+  {
+    "id": 5,
+    "compitoId": 5,
+    "testo": "Tiramisù completato e in fase di rassodamento. Texture perfetta, equilibrio ideale tra caffè e mascarpone.",
+    "autore": "Roberto Blu",
+    "dataCreazione": "2025-06-15T19:00:00",
+    "testoFormattato": "[15/06/2025 19:00] Roberto Blu: Tiramisù completato e in fase di rassodamento. Texture perfetta, equilibrio ideale tra caffè e mascarpone."
+  },
+  {
+    "id": 6,
+    "compitoId": 6,
+    "testo": "Lasagne in preparazione. Ragù pronto, besciamella in corso. Previsto completamento entro le 11:00.",
+    "autore": "Luigi Verdi",
+    "dataCreazione": "2025-09-20T09:30:00",
+    "testoFormattato": "[20/09/2025 09:30] Luigi Verdi: Lasagne in preparazione. Ragù pronto, besciamella in corso. Previsto completamento entro le 11:00."
+  },
+  {
+    "id": 7,
+    "compitoId": 6,
+    "testo": "Assemblaggio lasagne iniziato. Primi 4 tegami completati, altri 6 in lavorazione.",
+    "autore": "Luigi Verdi",
+    "dataCreazione": "2025-09-20T10:15:00",
+    "testoFormattato": "[20/09/2025 10:15] Luigi Verdi: Assemblaggio lasagne iniziato. Primi 4 tegami completati, altri 6 in lavorazione."
+  },
+  {
+    "id": 8,
+    "compitoId": 7,
+    "testo": "Pasta al pesto in preparazione. Basilico fresco selezionato, pesto in lavorazione al mortaio.",
+    "autore": "Anna Bianchi",
+    "dataCreazione": "2025-09-20T08:45:00",
+    "testoFormattato": "[20/09/2025 08:45] Anna Bianchi: Pasta al pesto in preparazione. Basilico fresco selezionato, pesto in lavorazione al mortaio."
+  },
+  {
+    "id": 9,
+    "compitoId": 8,
+    "testo": "PROBLEMA: Mancano i frutti di bosco per la panna cotta. Fornitore in ritardo, prevista consegna alle 14:00.",
+    "autore": "Marco Neri",
+    "dataCreazione": "2025-09-20T12:30:00",
+    "testoFormattato": "[20/09/2025 12:30] Marco Neri: PROBLEMA: Mancano i frutti di bosco per la panna cotta. Fornitore in ritardo, prevista consegna alle 14:00."
+  },
+  {
+    "id": 10,
+    "compitoId": 8,
+    "testo": "Aggiornamento: Contattato fornitore alternativo. Frutti di bosco surgelati disponibili come backup.",
+    "autore": "Chef Mario Rossi",
+    "dataCreazione": "2025-09-20T13:00:00",
+    "testoFormattato": "[20/09/2025 13:00] Chef Mario Rossi: Aggiornamento: Contattato fornitore alternativo. Frutti di bosco surgelati disponibili come backup."
+  },
+  {
+    "id": 11,
+    "compitoId": 11,
+    "testo": "Nota: Risotto per 200 persone richiede doppia attenzione. Preparare 4 pentole separate per gestire meglio la mantecatura.",
+    "autore": "Silvia Rosa",
+    "dataCreazione": "2025-12-09T16:00:00",
+    "testoFormattato": "[09/12/2025 16:00] Silvia Rosa: Nota: Risotto per 200 persone richiede doppia attenzione. Preparare 4 pentole separate per gestire meglio la mantecatura."
+  },
+  {
+    "id": 12,
+    "compitoId": 12,
+    "testo": "Promemoria: Carpaccio da preparare il giorno stesso per massima freschezza. Carne già ordinata dal fornitore premium.",
+    "autore": "Luigi Verdi",
+    "dataCreazione": "2025-12-09T14:30:00",
+    "testoFormattato": "[09/12/2025 14:30] Luigi Verdi: Promemoria: Carpaccio da preparare il giorno stesso per massima freschezza. Carne già ordinata dal fornitore premium."
+  }
+]

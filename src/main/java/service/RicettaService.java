@@ -28,12 +28,20 @@ public class RicettaService {
     private final Map<Integer, RicettaViewModel> viewModelCache = new ConcurrentHashMap<>();
     
     // Percorso del file JSON delle ricette
-    private static final String JSON_PATH = "src/main/resources/data/ricette.json";
+    private String jsonPath = "src/main/resources/data/ricette.json";
     
     /**
-     * Costruttore che carica le ricette dal file JSON.
+     * Costruttore predefinito che carica le ricette dal file JSON.
      */
     public RicettaService() {
+        caricaRicetteDaJson();
+    }
+    
+    /**
+     * Costruttore per i test che permette di specificare un percorso personalizzato.
+     */
+    public RicettaService(String jsonPath) {
+        this.jsonPath = jsonPath;
         caricaRicetteDaJson();
     }
     
@@ -42,7 +50,14 @@ public class RicettaService {
      */
     private void caricaRicetteDaJson() {
         try {
-            List<Ricetta> ricetteList = JsonLoader.loadFromResources("data/ricette.json", new TypeReference<List<Ricetta>>() {});
+            List<Ricetta> ricetteList;
+            if (jsonPath.startsWith("src/test/")) {
+                // Per i test, usa loadFromFile
+                ricetteList = JsonLoader.loadFromFile(jsonPath, new TypeReference<List<Ricetta>>() {});
+            } else {
+                // Per l'uso normale, usa loadFromResources
+                ricetteList = JsonLoader.loadFromResources("data/ricette.json", new TypeReference<List<Ricetta>>() {});
+            }
             
             if (ricetteList != null && !ricetteList.isEmpty()) {
                 ricette.addAll(ricetteList);
@@ -72,7 +87,7 @@ public class RicettaService {
      */
     private void salvaRicetteInJson() {
         try {
-            JsonLoader.saveToFile(JSON_PATH, ricette);
+            JsonLoader.saveToFile(jsonPath, ricette);
         } catch (Exception e) {
             System.err.println("Errore nel salvataggio delle ricette: " + e.getMessage());
             e.printStackTrace();

@@ -663,6 +663,7 @@ public class MenuController {
         }
         
         SezioneMenu sezione = sezioneOpt.get();
+        @SuppressWarnings("unchecked")
         ListView<RicettaInMenu> listView = (ListView<RicettaInMenu>) tabSelezionato.getContent();
         RicettaInMenu ricettaSelezionata = listView.getSelectionModel().getSelectedItem();
         
@@ -705,6 +706,7 @@ public class MenuController {
         }
         
         SezioneMenu sezioneSorgente = sezioneSorgenteOpt.get();
+        @SuppressWarnings("unchecked")
         ListView<RicettaInMenu> listView = (ListView<RicettaInMenu>) tabSelezionato.getContent();
         RicettaInMenu ricettaSelezionata = listView.getSelectionModel().getSelectedItem();
         
@@ -765,6 +767,7 @@ public class MenuController {
             return;
         }
         
+        @SuppressWarnings("unchecked")
         ListView<RicettaInMenu> listView = (ListView<RicettaInMenu>) tabSelezionato.getContent();
         RicettaInMenu ricettaSelezionata = listView.getSelectionModel().getSelectedItem();
         

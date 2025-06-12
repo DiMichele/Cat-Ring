@@ -24,12 +24,20 @@ public class MenuService {
     private final AtomicInteger nextSezioneId = new AtomicInteger(1);
     
     // Percorso del file JSON dei menu
-    private static final String JSON_PATH = "src/main/resources/data/menu.json";
+    private String jsonPath = "src/main/resources/data/menu.json";
     
     /**
-     * Costruttore che inizializza il servizio caricando i menu dal file JSON.
+     * Costruttore predefinito che inizializza il servizio caricando i menu dal file JSON.
      */
     public MenuService() {
+        caricaMenuDaJson();
+    }
+    
+    /**
+     * Costruttore per i test che permette di specificare un percorso personalizzato.
+     */
+    public MenuService(String jsonPath) {
+        this.jsonPath = jsonPath;
         caricaMenuDaJson();
     }
     
@@ -39,7 +47,14 @@ public class MenuService {
     private void caricaMenuDaJson() {
         try {
             // Carica i menu dal file JSON
-            List<Menu> menuList = JsonLoader.loadFromResources("data/menu.json", new TypeReference<List<Menu>>() {});
+            List<Menu> menuList;
+            if (jsonPath.startsWith("src/test/")) {
+                // Per i test, usa loadFromFile
+                menuList = JsonLoader.loadFromFile(jsonPath, new TypeReference<List<Menu>>() {});
+            } else {
+                // Per l'uso normale, usa loadFromResources
+                menuList = JsonLoader.loadFromResources("data/menu.json", new TypeReference<List<Menu>>() {});
+            }
             
             // Aggiunge i menu alla lista osservabile
             if (menuList != null && !menuList.isEmpty()) {
@@ -78,7 +93,7 @@ public class MenuService {
      */
     private void salvaMenuInJson() {
         try {
-            JsonLoader.saveToFile(JSON_PATH, new ArrayList<>(menus));
+            JsonLoader.saveToFile(jsonPath, new ArrayList<>(menus));
         } catch (Exception e) {
             System.err.println("Errore nel salvataggio dei menu: " + e.getMessage());
             e.printStackTrace();
@@ -91,6 +106,13 @@ public class MenuService {
      */
     public void salvaMenu() {
         salvaMenuInJson();
+    }
+
+    /**
+     * Metodo per i test per cambiare il percorso del file JSON.
+     */
+    public void setJsonPath(String path) {
+        this.jsonPath = path;
     }
     
     /**

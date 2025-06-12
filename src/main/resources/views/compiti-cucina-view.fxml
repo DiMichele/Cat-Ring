@@ -77,8 +77,8 @@
                 </TableView>
                 
                 <!-- Area per vista raggruppata -->
-                <ScrollPane fx:id="scrollVistaRaggruppata" visible="false" managed="false" VBox.vgrow="ALWAYS">
-                    <VBox fx:id="vboxVistaRaggruppata" spacing="10" prefWidth="1150">
+                <ScrollPane fx:id="scrollVistaRaggruppata" visible="false" managed="false" VBox.vgrow="ALWAYS" fitToWidth="true">
+                    <VBox fx:id="vboxVistaRaggruppata" spacing="10">
                         <padding>
                             <Insets top="10" right="10" bottom="10" left="10"/>
                         </padding>
@@ -123,19 +123,19 @@
                             <ColumnConstraints prefWidth="200" hgrow="ALWAYS"/>
                         </columnConstraints>
                         
-                        <Label text="1. Ricetta:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <Label text="Ricetta:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
                         <ComboBox fx:id="cmbRicette" prefWidth="200" maxWidth="Infinity" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
                         
-                        <Label text="2. Turno:" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                        <Label text="Turno:" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
                         <ComboBox fx:id="cmbTurni" prefWidth="200" maxWidth="Infinity" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
                         
-                        <Label text="3. Tempo stimato:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <Label text="Tempo stimato:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
                         <HBox spacing="5" alignment="CENTER_LEFT" GridPane.rowIndex="1" GridPane.columnIndex="1">
                             <Spinner fx:id="spnTempoStimato" editable="true" prefWidth="100"/>
                             <Label text="minuti"/>
                         </HBox>
                         
-                        <Label text="4. Cuoco disponibile:" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                        <Label text="Cuoco disponibile:" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
                         <ComboBox fx:id="cmbCuochi" prefWidth="200" maxWidth="Infinity" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
                         
                         <Label text="Quantità:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>

@@ -15,10 +15,21 @@ public class EventoService {
     private final ObservableList<Evento> eventi = FXCollections.observableArrayList();
     private int nextEventoId = 1;
     
-    // Percorso del file JSON degli eventi nel classpath
-    private static final String JSON_PATH = "src/main/resources/data/eventi.json";
+    // Percorso del file JSON degli eventi
+    private String jsonPath = "src/main/resources/data/eventi.json";
     
+    /**
+     * Costruttore predefinito che carica gli eventi dal file JSON.
+     */
     public EventoService() {
+        caricaEventiDaJson();
+    }
+    
+    /**
+     * Costruttore per i test che permette di specificare un percorso personalizzato.
+     */
+    public EventoService(String jsonPath) {
+        this.jsonPath = jsonPath;
         caricaEventiDaJson();
     }
     
@@ -27,7 +38,14 @@ public class EventoService {
      */
     private void caricaEventiDaJson() {
         try {
-            List<Evento> eventiList = JsonLoader.loadFromResources("data/eventi.json", new TypeReference<List<Evento>>() {});
+            List<Evento> eventiList;
+            if (jsonPath.startsWith("src/test/")) {
+                // Per i test, usa loadFromFile
+                eventiList = JsonLoader.loadFromFile(jsonPath, new TypeReference<List<Evento>>() {});
+            } else {
+                // Per l'uso normale, usa loadFromResources
+                eventiList = JsonLoader.loadFromResources("data/eventi.json", new TypeReference<List<Evento>>() {});
+            }
             
             if (eventiList != null && !eventiList.isEmpty()) {
                 eventi.addAll(eventiList);
@@ -52,7 +70,7 @@ public class EventoService {
      */
     private void salvaEventiInJson() {
         try {
-            JsonLoader.saveToFile(JSON_PATH, eventi);
+            JsonLoader.saveToFile(jsonPath, eventi);
         } catch (Exception e) {
             System.err.println("Errore nel salvataggio degli eventi: " + e.getMessage());
             e.printStackTrace();

@@ -1,64 +1,92 @@
-[ {
-  "id" : 1,
-  "nome" : "Bruschette al Pomodoro",
-  "descrizione" : "Pane tostato con pomodori freschi, basilico e aglio",
-  "stato" : "Pubblicata",
-  "tempoPreparazione" : 15,
-  "inUso" : false,
-  "tags" : [ ],
-  "istruzioni" : [ ]
-}, {
-  "id" : 2,
-  "nome" : "Test Ricetta",
-  "descrizione" : "Descrizione test",
-  "stato" : "Pubblicata",
-  "tempoPreparazione" : 30,
-  "inUso" : false,
-  "tags" : [ ],
-  "istruzioni" : [ ]
-}, {
-  "id" : 3,
-  "nome" : "Test Ricetta",
-  "descrizione" : "Descrizione test",
-  "stato" : "Pubblicata",
-  "tempoPreparazione" : 30,
-  "inUso" : false,
-  "tags" : [ ],
-  "istruzioni" : [ ]
-}, {
-  "id" : 4,
-  "nome" : "Test Ricetta",
-  "descrizione" : "Descrizione test",
-  "stato" : "Pubblicata",
-  "tempoPreparazione" : 30,
-  "inUso" : false,
-  "tags" : [ ],
-  "istruzioni" : [ ]
-}, {
-  "id" : 5,
-  "nome" : "Test Ricetta",
-  "descrizione" : "Descrizione test",
-  "stato" : "Pubblicata",
-  "tempoPreparazione" : 30,
-  "inUso" : false,
-  "tags" : [ ],
-  "istruzioni" : [ ]
-}, {
-  "id" : 6,
-  "nome" : "Test Ricetta",
-  "descrizione" : "Descrizione test",
-  "stato" : "Pubblicata",
-  "tempoPreparazione" : 30,
-  "inUso" : false,
-  "tags" : [ ],
-  "istruzioni" : [ ]
-}, {
-  "id" : 7,
-  "nome" : "Test Ricetta",
-  "descrizione" : "Descrizione test",
-  "stato" : "Pubblicata",
-  "tempoPreparazione" : 30,
-  "inUso" : false,
-  "tags" : [ ],
-  "istruzioni" : [ ]
-} ]
+[
+  {
+    "id": 1,
+    "nome": "Bruschette al Pomodoro",
+    "descrizione": "Pane tostato con pomodori freschi, basilico e aglio",
+    "stato": "Pubblicata",
+    "tempoPreparazione": 15,
+    "inUso": true,
+    "tags": ["Antipasto", "Vegetariano", "Italiano"],
+    "istruzioni": []
+  },
+  {
+    "id": 2,
+    "nome": "Risotto alla Milanese",
+    "descrizione": "Risotto cremoso con zafferano, midollo e parmigiano",
+    "stato": "Pubblicata",
+    "tempoPreparazione": 45,
+    "inUso": true,
+    "tags": ["Primo", "Tradizionale", "Lombardo"],
+    "istruzioni": []
+  },
+  {
+    "id": 3,
+    "nome": "Carpaccio di Manzo",
+    "descrizione": "Fettine sottili di manzo con rucola, grana e limone",
+    "stato": "Pubblicata",
+    "tempoPreparazione": 20,
+    "inUso": true,
+    "tags": ["Antipasto", "Carne", "Freddo"],
+    "istruzioni": []
+  },
+  {
+    "id": 4,
+    "nome": "Lasagne alla Bolognese",
+    "descrizione": "Lasagne con ragù tradizionale, besciamella e parmigiano",
+    "stato": "Pubblicata",
+    "tempoPreparazione": 120,
+    "inUso": true,
+    "tags": ["Primo", "Tradizionale", "Emiliano"],
+    "istruzioni": []
+  },
+  {
+    "id": 5,
+    "nome": "Salmone in Crosta di Erbe",
+    "descrizione": "Filetto di salmone con crosta di erbe aromatiche e pangrattato",
+    "stato": "Pubblicata",
+    "tempoPreparazione": 35,
+    "inUso": true,
+    "tags": ["Secondo", "Pesce", "Elegante"],
+    "istruzioni": []
+  },
+  {
+    "id": 6,
+    "nome": "Tiramisù Classico",
+    "descrizione": "Dolce al cucchiaio con savoiardi, caffè e mascarpone",
+    "stato": "Pubblicata",
+    "tempoPreparazione": 30,
+    "inUso": true,
+    "tags": ["Dolce", "Tradizionale", "Freddo"],
+    "istruzioni": []
+  },
+  {
+    "id": 7,
+    "nome": "Insalata Caprese",
+    "descrizione": "Mozzarella di bufala, pomodori e basilico fresco",
+    "stato": "Pubblicata",
+    "tempoPreparazione": 10,
+    "inUso": true,
+    "tags": ["Antipasto", "Vegetariano", "Estivo"],
+    "istruzioni": []
+  },
+  {
+    "id": 8,
+    "nome": "Pasta al Pesto Genovese",
+    "descrizione": "Trofie con pesto di basilico, pinoli e parmigiano",
+    "stato": "Pubblicata",
+    "tempoPreparazione": 25,
+    "inUso": true,
+    "tags": ["Primo", "Vegetariano", "Ligure"],
+    "istruzioni": []
+  },
+  {
+    "id": 9,
+    "nome": "Panna Cotta ai Frutti di Bosco",
+    "descrizione": "Dessert cremoso con coulis di frutti di bosco",
+    "stato": "Pubblicata",
+    "tempoPreparazione": 25,
+    "inUso": true,
+    "tags": ["Dolce", "Freddo", "Elegante"],
+    "istruzioni": []
+  }
+]

@@ -1,17 +1,56 @@
-[ {
-  "id" : 1,
-  "data" : "2025-06-11",
-  "oraInizio" : "08:00:00",
-  "oraFine" : "14:00:00",
-  "luogo" : "Cucina Principale",
-  "tipo" : "Mattina",
-  "modificabile" : true
-}, {
-  "id" : 2,
-  "data" : "2025-06-11",
-  "oraInizio" : "14:00:00",
-  "oraFine" : "20:00:00",
-  "luogo" : "Cucina Principale",
-  "tipo" : "Pomeriggio",
-  "modificabile" : true
-} ]
+[
+  {
+    "id": 1,
+    "data": "2025-06-15",
+    "oraInizio": "08:00:00",
+    "oraFine": "14:00:00",
+    "luogo": "Cucina Principale",
+    "tipo": "Mattina",
+    "modificabile": true
+  },
+  {
+    "id": 2,
+    "data": "2025-06-15",
+    "oraInizio": "14:00:00",
+    "oraFine": "20:00:00",
+    "luogo": "Cucina Principale",
+    "tipo": "Pomeriggio",
+    "modificabile": true
+  },
+  {
+    "id": 3,
+    "data": "2025-09-20",
+    "oraInizio": "06:00:00",
+    "oraFine": "12:00:00",
+    "luogo": "Centro Congressi - Cucina",
+    "tipo": "Mattina",
+    "modificabile": true
+  },
+  {
+    "id": 4,
+    "data": "2025-09-20",
+    "oraInizio": "12:00:00",
+    "oraFine": "18:00:00",
+    "luogo": "Centro Congressi - Cucina",
+    "tipo": "Pomeriggio",
+    "modificabile": true
+  },
+  {
+    "id": 5,
+    "data": "2025-11-30",
+    "oraInizio": "10:00:00",
+    "oraFine": "16:00:00",
+    "luogo": "Hotel Excelsior Palace - Cucina",
+    "tipo": "Mattina",
+    "modificabile": true
+  },
+  {
+    "id": 6,
+    "data": "2025-11-30",
+    "oraInizio": "16:00:00",
+    "oraFine": "22:00:00",
+    "luogo": "Hotel Excelsior Palace - Cucina",
+    "tipo": "Sera",
+    "modificabile": true
+  }
+]

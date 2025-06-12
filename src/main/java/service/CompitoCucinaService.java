@@ -26,9 +26,21 @@ public class CompitoCucinaService {
     private UtenteService utenteService;
     
     // Percorso del file JSON dei compiti
-    private static final String JSON_PATH = "src/main/resources/data/compiti.json";
+    private String jsonPath = "src/main/resources/data/compiti.json";
     
+    /**
+     * Costruttore predefinito che carica i compiti dal file JSON.
+     */
     public CompitoCucinaService() {
+        caricaCompitiDaJson();
+        caricaTurniDaJson();
+    }
+    
+    /**
+     * Costruttore per i test che permette di specificare un percorso personalizzato.
+     */
+    public CompitoCucinaService(String jsonPath) {
+        this.jsonPath = jsonPath;
         caricaCompitiDaJson();
         caricaTurniDaJson();
     }
@@ -48,7 +60,14 @@ public class CompitoCucinaService {
      */
     private void caricaCompitiDaJson() {
         try {
-            List<Compito> compitiList = JsonLoader.loadFromResources("data/compiti.json", new TypeReference<List<Compito>>() {});
+            List<Compito> compitiList;
+            if (jsonPath.startsWith("src/test/")) {
+                // Per i test, usa loadFromFile
+                compitiList = JsonLoader.loadFromFile(jsonPath, new TypeReference<List<Compito>>() {});
+            } else {
+                // Per l'uso normale, usa loadFromResources
+                compitiList = JsonLoader.loadFromResources("data/compiti.json", new TypeReference<List<Compito>>() {});
+            }
             
             if (compitiList != null && !compitiList.isEmpty()) {
                 compiti.addAll(compitiList);
@@ -117,7 +136,7 @@ public class CompitoCucinaService {
      */
     private void salvaCompitiInJson() {
         try {
-            JsonLoader.saveToFile(JSON_PATH, new ArrayList<>(compiti));
+            JsonLoader.saveToFile(jsonPath, new ArrayList<>(compiti));
         } catch (Exception e) {
             System.err.println("Errore nel salvataggio dei compiti: " + e.getMessage());
             e.printStackTrace();

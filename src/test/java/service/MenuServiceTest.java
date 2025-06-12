@@ -3,62 +3,93 @@ package service;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.MethodOrderer;
 import domain.menu.Menu;
 import domain.menu.SezioneMenu;
 import domain.ricette.Ricetta;
-
 import java.util.Arrays;
 import java.util.List;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class MenuServiceTest {
 
     private MenuService menuService;
     private int initialMenusCount;
+    private static final String TEST_JSON_PATH = "src/test/resources/data/menu-test.json";
     
     @BeforeEach
-    public void setup() {
-        menuService = new MenuService();
+    public void setup() throws Exception {
+        // Crea la directory di test se non esiste
+        Path testDir = Paths.get("src/test/resources/data");
+        if (!Files.exists(testDir)) {
+            Files.createDirectories(testDir);
+        }
+        
+        // Crea un file JSON di test vuoto
+        Path testFile = Paths.get(TEST_JSON_PATH);
+        if (!Files.exists(testFile)) {
+            Files.write(testFile, "[]".getBytes());
+        }
+        
+        // Inizializza il MenuService direttamente con il file di test
+        menuService = new MenuService(TEST_JSON_PATH);
+        
         initialMenusCount = menuService.getMenus().size();
+    }
+    
+    @AfterEach
+    public void cleanup() throws Exception {
+        // Elimina il file di test
+        Path testFile = Paths.get(TEST_JSON_PATH);
+        if (Files.exists(testFile)) {
+            Files.delete(testFile);
+        }
     }
     
     @Test
     @DisplayName("Test creazione nuovo menu")
     public void testCreaNuovoMenu() {
         // Act
-        Menu risultato = menuService.creaNuovoMenu();
+        Menu nuovoMenu = menuService.creaNuovoMenu();
         
         // Assert
-        assertNotNull(risultato);
-        assertTrue(risultato.getId() > 0);
+        assertNotNull(nuovoMenu);
+        assertTrue(nuovoMenu.getId() > 0);
+        assertEquals("Bozza", nuovoMenu.getStato());
         assertEquals(initialMenusCount + 1, menuService.getMenus().size());
-        assertEquals(risultato, menuService.getMenus().get(menuService.getMenus().size() - 1));
     }
     
     @Test
     @DisplayName("Test getMenuById con menu esistente")
     public void testGetMenuByIdEsistente() {
         // Arrange
-        Menu menu = menuService.creaNuovoMenu();
-        int menuId = menu.getId();
+        Menu menuCreato = menuService.creaNuovoMenu();
+        int menuId = menuCreato.getId();
         
         // Act
-        Menu risultato = menuService.getMenuById(menuId);
+        Menu menuTrovato = menuService.getMenuById(menuId);
         
         // Assert
-        assertNotNull(risultato);
-        assertEquals(menuId, risultato.getId());
+        assertNotNull(menuTrovato);
+        assertEquals(menuId, menuTrovato.getId());
+        assertEquals(menuCreato, menuTrovato);
     }
     
     @Test
     @DisplayName("Test getMenuById con menu non esistente")
     public void testGetMenuByIdNonEsistente() {
         // Act
-        Menu risultato = menuService.getMenuById(99999);
+        Menu menuTrovato = menuService.getMenuById(99999);
         
         // Assert
-        assertNull(risultato);
+        assertNull(menuTrovato);
     }
     
     @Test
